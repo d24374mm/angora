@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap'););
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
+:root{
+    --rose-color:rgb(242, 84, 84);
+    --section-color: rgb(248, 249, 250);
+    
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+font-family:  'Poppins', sans-serif;;
+}
+html {
+    scroll-behavior: smooth;
+ }
+
+
+section{
+    padding: 80px 0;
+}
+
+.color-rose{
+    color: var(--rose-color);
+    }
+
+
+    *,
+    *::after,
+    *::before {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   list-style: none ;
+   text-decoration: none;
+   text-transform: capitalize;
+   line-height: 1.6;
+    }
+    /* fixed item */
+    .setting{
+        position: fixed;
+        z-index: 99;
+        padding: 5px 10px;
+        color: #fff;
+        left: 0;
+        background-color: #333;
+        font-size: 20px;
+        cursor: pointer;        
+        top: 30%;
+        border-radius:0 5px 5px 0 ;
+    }
+    /*end fixed item */
+
+
+
+
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link:hover {
+       color:rgba(242, 84, 84);
+       font-weight: 700;
+    }
+   
+
+
+.main-title  {
+    text-align: center;
+  
+    margin-bottom: 50px;
+ }
+ .main-title h2 {
+    font-weight: 900;
+    position: relative;
+ }
+ .main-title h2::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 1px;
+    background-color:black;
+ }
+ .main-title:hover h2::after{
+    width: 100px;
+ }
+
+ .main-title img {
+   position: absolute;
+    background-color:#dee3e4;
+    opacity: 0.5;      
+    margin: -17px -36px;
+    z-index: -1;
+  
+}
+
+/* <!-- home --> */
+#home{
+  z-index: 1;
+    position: relative;
+}
+
+.scroll{
+    width: 30px;
+    height: 50px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    z-index: 9999;
+   
+}
+.scroll::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    animation: bounce 1.7s ease infinite;
+ }
+ @keyframes bounce {
+    0% {
+       top: 10px;
+    }
+    50% {
+       top: 20px;
+       
+       
+    } 
+   
+ }
+
+/* <!--end home --> */
+
+
+
+#home .carousel-item:nth-child(1){
+      background: url("../images/images/slideshow-1.jpg") fixed center no-repeat;
+    background-size: cover;
+  
+}
+
+#home .carousel-item:nth-child(2){
+    background: url("../images/images/slideshow-2.jpg") fixed center no-repeat;
+    background-size: cover;
+}
+#home .carousel-item:nth-child(3){
+    background: url("../images/images/slideshow-3.jpg") fixed center no-repeat;
+    background-size: cover;
+}
+
+#home .carousel-inner .carousel-item{
+    position: relative;
+    background-color: rgba(0 0 0 / 0.7);
+}
+
+#home .carousel-item .text{
+    position: relative;
+    left: 100%;
+    transition: 1s;
+}
+#home .carousel-item.active .text{
+    left: 0;
+}
+
+/* <!-- about --> */
+.progress{
+    --bs-progress-bar-bg:rgba(242, 84, 84);
+}
+
+.team-member .team-image {
+    position: relative;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.team-member .team-image:hover img{
+    transform: scale(1.2);
+}
+.team-member .team-image{
+    transition: .5s;
+}
+
+.team-member .team-image:hover .layer {
+    background-color: rgba(242, 84, 84, 0.85) !important;
+    
+}
+
+ #team .team-social-inner li{
+    background-color: rgba(242, 84, 84, 0.85)
+
+}
+.team-member .team-image:hover .title{
+    
+}
+
+.team-member .team-image:hover .team-social{
+ top: 50%;
+}
+
+.team-member .team-social {
+    position: absolute;
+    top: 150%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: top 0.5s ;
+    color: #fff;
+    
+}
+.team-member .team-social:hover {
+    top: 50%;
+}
+
+/* <!-- end about --> */
+
+
+/* <!-- team --> */
+
+
+
+/* <!-- end team --> */
+
+
+/* <!-- slide --> */
+.main-btn{
+    background-color: rgb(242, 84, 84);
+    color: #fff;   
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.5s;
+    border: unset;
+}
+.main-btn:hover{
+    background-color:rgba(242, 84, 84, 0.365) ;
+}
+
+
+
+
+/* <!-- end slide --> */
+
+
+/* <!-- services --> */
+.pink-color{
+    color:rgb(242, 84, 84) ;
+}
+
+
+/* #services .services-area .srv{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap:20px;
+    margin-top: 100px;
+} */
+
+/* .srv>.services-text {
+    position: relative;
+    display: block;
+    float: left;
+    width: calc(100% - 52px);
+} */
+
+.srv>.icon {
+  
+    float: left;
+    font-size: 32px;
+    line-height: 32px;    
+    font-weight: normal;
+    margin-right: 20px;
+  
+}
+
+.srv h3 {
+    font-size: 18px;
+    margin-top: 0;   
+    transition: all 0.3s;
+}
+.srv:hover h3{
+    color:rgb(242, 84, 84) 
+}
+.srv p {
+    font-size: 15px;
+ 
+
+}
+
+
+
+.block-media-row  .carousel-indicators [data-bs-target]{
+    text-indent:unset ;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    
+    }
+
+    .block-media-row .carousel-indicators{
+        bottom: -30px;
+     }
+     .block-media-row .carousel-item img , 
+     .block-media-row .carousel-item h3, 
+     .block-media-row .carousel-item p{
+        transform: scale(0);
+        transition: 1s;
+     }
+     
+    .block-media-row .carousel-item.active img , 
+    .block-media-row .carousel-item.active h3, 
+    .block-media-row .carousel-item.active p{
+        transform: scale(1);
+     }
+
+
+/* <!-- end services --> */
+.quate-color{
+    color: #999;
+}
+
+
+/* <!-- client --> */
+
+
+
+/* <!-- end client --> */
+
+
+
+/* <!-- contact --> */
+
+#contact .main:hover h3{
+    color:rgb(242, 84, 84) 
+}
+#contact .main h3{
+    transition: 0.5s;
+}
+/* <!-- end contact --> */
+
+
+
+/* <!-- footer --> */
+
+
+footer .footer-widgets {
+    background-image:url(../images/images/dotted-map.png);
+    background-size: contain;
+    background-color: black;
+  
+        position: relative;
+       
+        background: #222;
+        padding-top: 60px;
+        padding-bottom: 60px;
+       
+        background-size: contain;
+    }
+
+
+
+
+
+    
+    footer .footer-widgets .tages .tage {
+        border: 1px solid #b0b0b0;
+    }
+
+    footer .widget .tages:hover li{
+        color:rgb(242, 84, 84) ;
+    }
+    .tages .tage {
+        display: block;
+        float: left;
+        margin-right: 8px;
+        margin-bottom: 8px;
+        padding: 2px 10px;
+        font-size: 13px;
+        text-decoration: none;
+        border-radius: 3px;
+        border: 1px solid #eee;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+
+    footer .footer-widgets .tages .tage:hover {
+        border: 1px solid rgb(242, 84, 84) ;
+    }
+   
+    footer .footer-widgets .tages .tage{
+        color:rgb(242, 84, 84) ;
+    }
+
+    footer .footer-widgets a:hover{
+        color:rgb(242, 84, 84) ;
+    }
+
+    footer{
+        position: relative;
+    }
+    footer .to-up {
+        background: rgba(242, 84, 84, 0.5);
+    }
+    footer .to-up:hover{
+        background-color: rgb(242, 84, 84);
+    }
+    footer .to-up {
+        position: absolute;
+        display: block;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        top: -25px;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        border-radius: 50%;
+        color: #fff;
+        font-size: 18px;
+        line-height: 46px;
+        text-align: center;
+        cursor: pointer !important;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+
+
+
+    .footer-social a>i {
+        font-size: 16px;
+        line-height: 16px;
+        color: #fff;
+        width: 1.2em;
+        text-align: center;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+    .footer-social a>i:hover{
+        color:rgb(242, 84, 84); ;
+    }
+
+
+footer .footer-copyright {
+    position: relative;
+    clear: both;
+    background-color: #1a1a1a;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.wh-main{
+    color: #b0b0b0;
+}
+
+
+/* <!-- end footer --> */
